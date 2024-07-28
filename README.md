@@ -1,2 +1,2 @@
-# Ecology-Project
-solving environmental problems
+## Мои идеи для проекта:
+> Моя идея заключается в ...
