@@ -1,6 +1,6 @@
 #Импорт
 from flask import Flask, render_template, request
-
+#Код взят из другого проекта
 
 app = Flask(__name__)
 
