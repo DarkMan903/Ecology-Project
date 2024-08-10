@@ -12,33 +12,42 @@
 </head>
 
 <body>
-  <form>
+  
+  <form action="/test" method="post">
     <fieldset>
       
-      <legend>Что такое "вопрос"?</legend>
+      <legend>Сколько килограммов мусора производит среднестатистический человек за год?</legend>
       
       <div>   
-        <input type="radio" id="f" value="f" name="name" required />
-        <label for="f">Вопрос</label>
+        <label for="option1">38 кг</label>
+        <input type="radio" id="option1" value="1" name="choise" required />
       </div>
       
       <div>   
-        <input type="radio" id="g" value="g" name="name" required />
-        <label for="g">Вопрос</label>
+        <label for="option2">120 кг</label>
+        <input type="radio" id="option2" value="2" name="choise" required />
       </div>
 
       <div>   
-        <input type="radio" id="h" value="h" name="name"  required />
-        <label for="h">Вопрос</label>
+        <label for="option3">340 кг</label>
+        <input type="radio" id="option3" value="3" name="choise"  required />
       </div>
     
     </fieldset>
     
-    <div>
-      <input type="submit" value="Ответить!"  />
+    <div class="button__skill">
+      <input class="button__skill" type="submit" name="button_enter" value="Ответить!">
     </div>
   
   </form>
+  
+  <h1>{{answer}}</h1>
+  
+  {% if button_enter %}
+  <div class="button-enter">
+    <a class="button-enter" href="">Следующий вопрос!</a>
+  </div>
+  {% endif %}
 
 </body>
 </html>
