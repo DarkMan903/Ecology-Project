@@ -7,10 +7,10 @@ h1 {
 }
 
 fieldset {
-    margin-right: 1600px;
+    margin-right: 1000px;
 }
 
-.start_button {
+.start_button, .button-enter {
     border: 0;
     line-height: 2.5;
     padding: 0 20px;
@@ -19,7 +19,7 @@ fieldset {
     color: #fff;
     text-shadow: 1px 1px 1px #000;
     border-radius: 10px;
-    background-color: rgb(220 0 0 / 100%);
+    background-color: rgb(138 219 207 / 100%);
     background-image: linear-gradient(
         to top left,
         rgb(0 0 0 / 20%),
