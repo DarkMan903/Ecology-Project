@@ -8,46 +8,14 @@
   >
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="../static/css/style.css">
-  <title>Первый вопрос!</title>
+  <title>Тест</title>
 </head>
 
 <body>
-  
-  <form action="/test" method="post">
-    <fieldset>
-      
-      <legend>Сколько килограммов мусора производит среднестатистический человек за год?</legend>
-      
-      <div>   
-        <label for="option1">38 кг</label>
-        <input type="radio" id="option1" value="1" name="choise" required />
-      </div>
-      
-      <div>   
-        <label for="option2">120 кг</label>
-        <input type="radio" id="option2" value="2" name="choise" required />
-      </div>
-
-      <div>   
-        <label for="option3">340 кг</label>
-        <input type="radio" id="option3" value="3" name="choise"  required />
-      </div>
-    
-    </fieldset>
-    
-    <div class="button__skill">
-      <input class="button__skill" type="submit" name="button_enter" value="Ответить!">
+    <div>
+        <h1>Приветствуем на прохождении теста</h1>
+        <h2>Ответьте на несколько вопросов и получите ответ!</h2>
+        <a class="start_button" href="./test">Начать тест!</a>
     </div>
-  
-  </form>
-  
-  <h1>{{answer}}</h1>
-  
-  {% if button_enter %}
-  <div class="button-enter">
-    <a class="button-enter" href="">Следующий вопрос!</a>
-  </div>
-  {% endif %}
-
 </body>
 </html>
