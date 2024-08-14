@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Второй вопрос!</title>
+</head>
+
+<body>
+  
+  <form action="/question2" method="post">
+    <fieldset>
+      
+      <legend>Вопрос 2. Что, в основном, производят из переработанных пластиковых бутылок?</legend>
+      
+      <div>   
+        <label for="option4">1. Новые пластиковые бутылки</label>
+        <input type="radio" id="option4" value="4" name="choise1" required />
+      </div>
+      
+      <div>   
+        <label for="option5">2. Мягкие игрушки</label>
+        <input type="radio" id="option5" value="5" name="choise1" required />
+      </div>
+
+      <div>   
+        <label for="option6">3. Одежду</label>
+        <input type="radio" id="option6" value="6" name="choise1"  required />
+      </div>
+    
+    </fieldset>
+    
+    {% if not button__enter  %}
+    <div class="button__skill">
+      <input class="button__skill" type="submit" name="button__enter" value="Ответить!">
+    </div>
+    {% endif %}
+
+  </form>
+  
+  <h2>{{answer}}</h2>
+  
+
+  {% if button__enter %}
+  
+  <fieldset class="set">
+    <h3>
+      Из переработанных пластиковых бутылок в основном производят новые пластиковые бутылки, контейнеры для хранения и упаковки, а также другие изделия из пластика, такие как коврики, одежда и т.д.
+      Процесс переработки включает в себя сжигание пластиковых бутылок для получения топлива, а затем использование полученных материалов для производства новых изделий.
+    </h3>
+  </fieldset>
+
+  <div>
+    <a class="answer2" href="./question3">Следующий вопрос!</a>
+  </div>
+  
+  {% endif %}
+
+
+</body>
+</html>

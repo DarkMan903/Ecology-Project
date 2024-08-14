@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Первый вопрос!</title>
+</head>
+
+<body>
+  
+  <form action="/question1" method="post">
+    <fieldset>
+      
+      <legend>Вопрос 1. Сколько килограммов мусора производит среднестатистический человек за год?</legend>
+      
+      <div>   
+        <label for="option1">1. 38 кг</label>
+        <input type="radio" id="option1" value="1" name="choise" required />
+      </div>
+      
+      <div>   
+        <label for="option2">2. 120 кг</label>
+        <input type="radio" id="option2" value="2" name="choise" required />
+      </div>
+
+      <div>   
+        <label for="option3">3. 340 кг</label>
+        <input type="radio" id="option3" value="3" name="choise"  required />
+      </div>
+    
+    </fieldset>
+    
+    {% if not button_enter  %}
+    <div class="button__skill">
+      <input class="button__skill" type="submit" name="button_enter" value="Ответить!">
+    </div>
+    {% endif %}
+
+  </form>
+  
+  <h2>{{answer}}</h2>
+  
+  
+  {% if button_enter %}
+  
+  <fieldset class="set">
+    <h3>
+      Среднестатистический человек в год производит примерно 340 кг мусора, но это может варьироваться в зависимости от уровня жизни, доступа к утилизации отходов и образа жизни. 
+      Люди в развитых странах или с доступом к современным системам утилизации могут производить меньше мусора, чем те, кто живет в менее развитых странах или имеет ограниченный доступ к утилизации.
+    </h3>
+  </fieldset>
+  
+  <div>
+    <a class="answer2" href="./question2">Следующий вопрос!</a>
+  </div>
+  
+  {% endif %}
+
+
+</body>
+</html>

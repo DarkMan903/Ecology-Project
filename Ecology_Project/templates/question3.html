@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+  >
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../static/css/style.css">
+  <title>Третий вопрос!</title>
+</head>
+
+<body>
+  
+  <form action="/question3" method="post">
+    <fieldset>
+      
+      <legend>Вопрос 3. Какой мусор считается самым распространенным (по количеству единиц) на Земле?</legend>
+      
+      <div>   
+        <label for="option7">1. Сигаретные окурки</label>
+        <input type="radio" id="option7" value="7" name="choise2" required />
+      </div>
+      
+      <div>   
+        <label for="option8">2. Полиэтиленовые пакеты</label>
+        <input type="radio" id="option8" value="8" name="choise2" required />
+      </div>
+
+      <div>   
+        <label for="option9">3. Автомобильные покрышки</label>
+        <input type="radio" id="option9" value="9" name="choise2"  required />
+      </div>
+    
+    </fieldset>
+    
+    {% if not button___enter  %}
+    <div class="button__skill">
+      <input class="button__skill" type="submit" name="button___enter" value="Ответить!">
+    </div>
+    {% endif %}
+
+  </form>
+  
+  <h2>{{answer}}</h2>
+  
+  
+  {% if button___enter %}
+  
+  <fieldset class="set">
+    <h3>
+      Самым распространенным видом мусора на Земле является пластиковый мусор, особенно пластиковые бутылки и контейнеры. 
+      Пластиковые отходы широко используются в повседневной жизни, и их производство и потребление продолжает расти. 
+      Это создает проблему загрязнения окружающей среды и уменьшает качество жизни для многих людей.
+    </h3>
+  </fieldset>
+
+  <div>
+    <a class="answer2" href="./result">Итог!</a>
+  </div>
+  
+  {% endif %}
+
+
+</body>
+</html>
